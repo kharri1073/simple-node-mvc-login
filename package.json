@@ -1,0 +1,28 @@
+{
+  "name": "simple-node-mvc",
+  "version": "1.0.0",
+  "description": "a simple node mvc with express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kharri1073/simple-node-mvc.git"
+  },
+  "keywords": [
+    "node.js",
+    "mvc",
+    "javascript"
+  ],
+  "author": "kevin harrison <kharri1073@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kharri1073/simple-node-mvc/issues"
+  },
+  "homepage": "https://github.com/kharri1073/simple-node-mvc#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
