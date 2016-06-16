@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/kharri1073/simple-node-mvc#readme",
   "dependencies": {
+    "ejs": "^2.4.2",
     "express": "^4.13.4"
   }
 }
