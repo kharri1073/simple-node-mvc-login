@@ -1,8 +1,6 @@
 exports.about = function(req, res)
 {
 
-    var fs = require("fs");
-    var path = require('path');
     var showdown  = require('showdown');
     var converter = new showdown.Converter();
 
