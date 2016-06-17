@@ -12,10 +12,14 @@ describe('loading express', function () {
     server.close();
   });
 
-  it('responds to index page /', function testSlash(done) {
-    request(server)
-      .get('/')
-      .expect(200, done);
+  var test_urls = ['/','/about','/about/secret'];
+
+  test_urls.forEach(function(url) {
+    it('responds to index page '+url, function testSlash(done) {
+        request(server)
+          .get(url)
+          .expect(200,done);
+    });
   });
 
   it('404 on other pages', function testPath(done) {
