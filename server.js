@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
-var path = require('path');
+
+path = require('path');
+fs = require('fs');
 
 app.use(express.static(path.join(__dirname,'public')));
 app.set('view engine','ejs');
