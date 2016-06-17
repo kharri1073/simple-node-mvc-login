@@ -6,4 +6,5 @@ module.exports = function(app)
 {
     app.get('/', index_controller.index);
     app.get('/about', about_controller.about);
+    app.get('/about/secret', about_controller.secret);
 }

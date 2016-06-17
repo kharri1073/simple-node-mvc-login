@@ -15,3 +15,14 @@ exports.about = function(req, res)
     });
 
 };
+
+exports.secret = function(req, res)
+{
+
+    res.render('index.ejs',//TODO: this really should be setup as a layout instead of a view
+    {
+        title:'secret about page',
+        content: 'just a secret page'
+    });
+
+};
