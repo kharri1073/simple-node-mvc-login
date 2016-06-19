@@ -6,7 +6,7 @@ exports.about = function(req, res)
 
     var readme_html = converter.makeHtml( fs.readFileSync( path.resolve(__dirname,'../README.md'), 'utf8' ) );
 
-    res.render('index.ejs',//TODO: this really should be setup as a layout instead of a view
+    res.render('index.ejs',
     {
         title:'About the simple-node-mvc project',
         content: readme_html
@@ -17,7 +17,7 @@ exports.about = function(req, res)
 exports.secret = function(req, res)
 {
 
-    res.render('index.ejs',//TODO: this really should be setup as a layout instead of a view
+    res.render('index.ejs',
     {
         title:'secret about page',
         content: 'just a secret page'
