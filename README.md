@@ -1,5 +1,5 @@
-# simple-node-mvc
+# simple-node-mvc-login
 
-[![Code Climate](https://img.shields.io/codeclimate/github/kharri1073/simple-node-mvc.svg?label=quality)](https://codeclimate.com/github/kharri1073/simple-node-mvc)
+[![Code Climate](https://img.shields.io/codeclimate/github/kharri1073/simple-node-mvc-login.svg?label=quality)](https://codeclimate.com/github/kharri1073/simple-node-mvc-login)
 
-Just a simple starter node.js mvc
+Just a simple starter node.js mvc login script
