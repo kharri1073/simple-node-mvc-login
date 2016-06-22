@@ -5,28 +5,34 @@ var TwitterStrategy = require('passport-twitter').Strategy;
 var Model = require('../models/model.js');
 var config = require('../config.js');
 
-function checkUser(user,done)
+function checkUser(profile,done)
 {
 
-    if (user !== null) {
-        //we have the user in the db already
-        console.log('at done');
-        done(null, user);
+    Model.Users.findOne({ where:{ oauth_id: profile.id } }).then(function(user) {
 
-    } else {
-        //we don't have the user in the db
-        user = Model.Users.build({
-            oauth_id: profile.id,
-            name: profile.displayName,
-            created: Date.now()
-        });
-
-        user.save().then(function(user) {
+        if (user !== null) {
+            //we have the user in the db already
+            console.log('at done');
             done(null, user);
-        }).catch(function(e){
-            done(e, false);
-        });
-    }
+
+        } else {
+            //we don't have the user in the db
+            user = Model.Users.build({
+                oauth_id: profile.id,
+                name: profile.displayName,
+                created: Date.now()
+            });
+
+            user.save().then(function(user) {
+                done(null, user);
+            }).catch(function(e){
+                done(e, false);
+            });
+        }
+
+    }).catch(function(e){
+        console.log(e);  //manage the error
+    });
 
 }
 
@@ -35,14 +41,9 @@ module.exports = passport.use(new FacebookStrategy({
   clientSecret: config[env].passport.facebook.secretKey,
   callbackURL: config[env].passport.facebook.callbackURL
   },
-  function(accessToken, refreshToken, profile, done) {
-
-    Model.Users.findOne({ where:{ oauth_id: profile.id } }).then(function(user) {
-        checkUser(user,done);
-    }).catch(function(e){
-        console.log(e);  //manage the error
-    });
-
+  function(accessToken, refreshToken, profile, done)
+  {
+    checkUser(profile,done);
   }
 ));
 
@@ -51,14 +52,9 @@ passport.use(new TwitterStrategy({
   consumerSecret: config[env].passport.twitter.secretKey,
   callbackURL: config[env].passport.twitter.callbackURL
   },
-  function(accessToken, refreshToken, profile, done) {
-
-    Model.Users.findOne({ where:{ oauth_id: profile.id } }).then(function(user) {
-        checkUser(user,done);
-    }).catch(function(e){
-        console.log(e);  //manage the error
-    });
-
+  function(accessToken, refreshToken, profile, done)
+  {
+    checkUser(profile,done);
   }
 ));
 
@@ -67,14 +63,9 @@ passport.use(new InstagramStrategy({
   clientSecret: config[env].passport.instagram.secretKey,
   callbackURL: config[env].passport.instagram.callbackURL
   },
-  function(accessToken, refreshToken, profile, done) {
-
-    Model.Users.findOne({ where:{ oauth_id: profile.id } }).then(function(user) {
-        checkUser(user,done);
-    }).catch(function(e){
-        console.log(e);  //manage the error
-    });
-
+  function(accessToken, refreshToken, profile, done)
+  {
+    checkUser(profile,done);
   }
 ));
 
