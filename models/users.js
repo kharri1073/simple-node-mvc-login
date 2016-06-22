@@ -39,18 +39,6 @@ var attributes =
     }
 }
 
-/*
-// create a user model
-var User = pg.model('User', {
-  oauthID: Number,
-  name: String,
-  created: Date
-});
-
-module.exports = User;
-*/
-
-
 var options = 
 {
     freezeTableName: true,
