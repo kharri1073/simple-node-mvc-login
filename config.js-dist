@@ -1,0 +1,66 @@
+module.exports = 
+{
+    "production": 
+    {
+        "postgres": 
+        {
+            "database":"simple-node-mvc-login",
+            "host":"production.host",
+            "username":"db_user",
+            "password":"db_pass"
+        },
+        "passport":
+        {
+            "facebook":
+            {
+                "publicKey": "get-your-own",
+                "secretKey": "get-your-own",
+                "callbackURL": "http://localhost:3333/auth/facebook/callback"
+            },
+            "instagram":
+            {
+                "publicKey": "get-your-own",
+                "secretKey": "get-your-own",
+                "callbackURL": "http://localhost:3333/auth/instagram/callback"
+            },
+            "twitter":
+            {
+                "publicKey": "get-your-own",
+                "secretKey": "get-your-own",
+                "callbackURL": "http://localhost:3333/auth/twitter/callback"
+            }
+        }
+    },
+    "development": 
+    {
+        "postgres": 
+        {
+            "database":"simple-node-mvc-login",
+            "host":"localhost",
+            "username":"dev-user",
+            "password":"dev-pass"
+        },
+        "passport":
+        {
+            "facebook":
+            {
+                "publicKey": "get-your-own",
+                "secretKey": "get-your-own",
+                "callbackURL": "http://localhost:3333/auth/facebook/callback"
+            },
+            "instagram":
+            {
+                "publicKey": "get-your-own",
+                "secretKey": "get-your-own",
+                "callbackURL": "http://localhost:3333/auth/instagram/callback"
+            },
+            "twitter":
+            {
+                "publicKey": "get-your-own",
+                "secretKey": "get-your-own",
+                "callbackURL": "http://localhost:3333/auth/twitter/callback"
+            }
+        }
+
+    }
+}

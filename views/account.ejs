@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<% include partials/head.ejs %>
+</head>
+<body class="container">
+
+    <header>
+        <% include partials/header.ejs %>
+    </header>
+
+    <main>
+    <%- content %>
+    <%- user.name %>
+    </main>
+
+    <footer>
+        <% include partials/footer.ejs %>
+    </footer>
+    
+</body>
+</html>

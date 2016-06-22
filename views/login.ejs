@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<% include partials/head.ejs %>
+    <link href="/css/bootstrap-social.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="login">
+    <div class="container">
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    <div class="h-divider form-signin">
+
+    <a class="btn btn-block btn-social btn-facebook form-signin" href="/auth/facebook">
+        <span class="fa fa-facebook"></span> Sign in with Facebook
+    </a>
+    <a class="btn btn-block btn-social btn-instagram form-signin" href="/auth/instagram">
+        <span class="fa fa-instagram"></span> Sign in with Instagram
+    </a>
+    <a class="btn btn-block btn-social btn-twitter form-signin" href="/auth/twitter">
+        <span class="fa fa-twitter"></span> Sign in with Twitter
+    </a>
+
+
+    </div> <!-- /container -->
+</body>
+</html>
