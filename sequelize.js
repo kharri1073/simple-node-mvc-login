@@ -3,7 +3,7 @@ var db_string = "postgres://"+config.username+":"+config.password+"@"+config.hos
 
 var Sequelize = require('sequelize');
 var sequelize = new Sequelize(db_string, {
-        logging: (process.env.NODE_ENV != 'production' ? true : false)
+        logging: (process.env.NODE_ENV !== 'production' ? true : false)
     });
 
 module.exports = sequelize;
