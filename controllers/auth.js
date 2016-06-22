@@ -20,7 +20,8 @@ function checkUser(profile,done)
             user = Model.Users.build({
                 oauth_id: profile.id,
                 name: profile.displayName,
-                created: Date.now()
+                created: Date.now(),
+                provider: profile.provider
             });
 
             user.save().then(function(user) {

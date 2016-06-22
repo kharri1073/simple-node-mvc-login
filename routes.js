@@ -22,6 +22,10 @@ module.exports = function(app)
     app.get('/account', authTest, account_controller.index);
     app.get('/account/update', authTest, account_controller.update);
     app.get('/login', login_controller.index);
+    app.get('/logout', function(req, res){
+      req.logout();
+      res.redirect('/');
+    });
 
 }
 

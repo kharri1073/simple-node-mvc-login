@@ -11,7 +11,7 @@
         <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/login">Log In</a></li>
+            <li><a href="/<%= (typeof user == 'object' && user) ? 'logout' : 'login' %>"><%= (typeof user == 'object' && user) ? 'Log Out' : 'Log In' %></a></li>
         </ul>
       
     </div>

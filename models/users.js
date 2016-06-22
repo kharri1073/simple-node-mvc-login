@@ -36,6 +36,12 @@ var attributes =
         type: Sequelize.DATE,
         allowNull: false,
         unique: false
+    },
+    provider:
+    {
+        type: Sequelize.STRING,
+        allowNull: true,
+        unique: false
     }
 }
 
