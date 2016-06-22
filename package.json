@@ -1,7 +1,7 @@
 {
-  "name": "simple-node-mvc",
+  "name": "simple-node-mvc-login",
   "version": "1.0.0",
-  "description": "a simple node mvc with express",
+  "description": "a simple node mvc login script with express",
   "main": "server.js",
   "scripts": {
     "test": "mocha",
@@ -9,19 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kharri1073/simple-node-mvc.git"
+    "url": "git+https://github.com/kharri1073/simple-node-mvc-login.git"
   },
   "keywords": [
     "node.js",
     "mvc",
-    "javascript"
+    "javascript",
+    "login",
+    "passport",
+    "oauth"
   ],
   "author": "kevin harrison <kharri1073@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kharri1073/simple-node-mvc/issues"
+    "url": "https://github.com/kharri1073/simple-node-mvc-login/issues"
   },
-  "homepage": "https://github.com/kharri1073/simple-node-mvc#readme",
+  "homepage": "https://github.com/kharri1073/simple-node-mvc-login#readme",
   "dependencies": {
     "chai": "^3.5.0",
     "ejs": "^2.4.2",
